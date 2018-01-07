@@ -1,10 +1,10 @@
 {
   "variables": {
-    "aws_access_key": "***********",
-    "aws_secret_key": "*************",
+    "aws_access_key": "*********",
+    "aws_secret_key": "***************",
     "region": "eu-west-2",
     "source_ami": "ami-fcc4db98",
-    "ami_name": "openWater-db",
+    "ami_name": "db-server",
     "commitid": "{{env `COMMIT_ID`}}",
     "account": "{{env `ACCOUNT`}}",
     "ssh_username": "ubuntu"
@@ -37,7 +37,7 @@
     {
       "type": "ansible",
       "user": "ubuntu",
-      "playbook_file": "../../ansible/ansible_db/db_provision.yml"
+      "playbook_file": "../ansible/ansible_db/db_provision.yml"
     }
   ],
   "post-processors": [
